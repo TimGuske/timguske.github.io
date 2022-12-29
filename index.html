@@ -22,6 +22,7 @@
         let KEY_SPACE = false; // 32
         let KEY_UP = false; // 38
         let KEY_DOWN = false; // 40
+        let USE_TIM = false;
         let GAME_OVER = false;
         let hitcounter = 0;
         let ufoID = 0;
@@ -55,6 +56,10 @@
             if (e.keyCode == 40) {
                 KEY_DOWN= true;
             }
+            if (e.keyCode == 84) {
+                USE_TIM = !USE_TIM;
+            }
+            console.log('Use Tim: ' + USE_TIM);
         }
 
         document.onkeyup = function(e) {
@@ -77,7 +82,7 @@
             loadImages();
 
             updateID = setInterval(update, 1000 / 25);
-            setInterval(createUfos, 5000);
+            setInterval(createUfos, 2500);
             setInterval(checkForCollision, 1000 / 25);
             setInterval(checkForShoot, 1000 / 10);
             draw();
@@ -153,8 +158,8 @@
                 id: ufoID,
                 x:800,
                 y:Math.random() * 500,
-                width: 100,
-                height: 40,
+                width: 80,
+                height: 80,
                 src: 'img/ufo.png',
                 img: new Image(),
             }
@@ -163,7 +168,14 @@
                 level += 1;
             }
 
-            ufo.img.src = ufo.src;
+            if (USE_TIM){
+               ufo.img.src = 'img/tim.png';  
+            }
+            else
+            {
+                ufo.img.src = ufo.src;
+            }
+            
             ufos.push(ufo);
             console.log(ufo);
         }
