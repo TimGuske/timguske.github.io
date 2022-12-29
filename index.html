@@ -25,6 +25,7 @@
         let GAME_OVER = false;
         let hitcounter = 0;
         let ufoID = 0;
+        let level = 1;
         let updateID;
         let canvas;
         let ctx;
@@ -157,6 +158,11 @@
                 src: 'img/ufo.png',
                 img: new Image(),
             }
+
+            if (ufoID % 10 == 0){
+                level += 1;
+            }
+
             ufo.img.src = ufo.src;
             ufos.push(ufo);
             console.log(ufo);
@@ -165,15 +171,15 @@
         function update() {
 
             if( KEY_UP) {
-                rocket.y -= 4;
+                rocket.y -= 7;
             }
 
             if (KEY_DOWN) {
-                rocket.y += 4;
+                rocket.y += 7;
             }
 
             ufos.forEach(function(ufo){
-                ufo.x -= 5;
+                ufo.x -= 5 * level;
             });
 
             shots.forEach(function(shot) {
@@ -201,6 +207,7 @@
             ctx.font="16px Verdana";
             ctx.fillStyle = 'white';
             ctx.fillText("Score: " + hitcounter,10,30);
+            ctx.fillText("Level: " + level,10,60);
 
             requestAnimationFrame(draw);
         }
