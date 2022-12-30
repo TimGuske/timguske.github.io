@@ -38,7 +38,8 @@
             y: 200,
             width: 100,
             height: 80,
-            src: 'img/rocket.png'
+            src: 'img/rocket.png',
+            sowas: 'test'
         }
 
         let ufos = [];
@@ -218,7 +219,7 @@
             
             ctx.font="16px Verdana";
             ctx.fillStyle = 'white';
-            ctx.fillText("Score: " + hitcounter,10,30);
+            ctx.fillText("Score: " + hitcounter + ' - ' + rocket.sowas ,10,30);
             ctx.fillText("Level: " + level,10,60);
 
             requestAnimationFrame(draw);
