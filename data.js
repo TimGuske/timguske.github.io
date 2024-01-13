@@ -25,13 +25,13 @@ const projectsData = [
     },
     {
         name: "Liefermax App",
-        type: "Next.js und React",
+        type: "Next.js und React mit MongoDB",
         date: "01.01.2024",
         link: "https://liefermax-seven.vercel.app/"
     },
     {
         name: "Patricias Rezepte App",
-        type: "Next.js und React",
+        type: "Next.js und React mit MongoDB",
         date: "noch offen",
         link: "/"
     }
