@@ -28,6 +28,12 @@ const projectsData = [
         type: "Next.js und React",
         date: "01.01.2024",
         link: "https://liefermax-seven.vercel.app/"
+    },
+    {
+        name: "Patricias Rezepte App",
+        type: "Next.js und React",
+        date: "noch offen",
+        link: "/"
     }
 ];
 
