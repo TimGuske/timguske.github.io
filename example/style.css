@@ -1,0 +1,10 @@
+h1 {
+    background-color: brown;
+    font-style: italic;
+}
+
+.hot {
+    background-color: aqua;
+    font-style: oblique;
+    border-style: dashed;
+}
