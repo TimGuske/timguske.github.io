@@ -1,10 +1,19 @@
-h1 {
-    background-color: brown;
-    font-style: italic;
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .hot {
-    background-color: aqua;
-    font-style: oblique;
+    background-color: grey;
     border-style: dashed;
+    border-color: aqua;
+    font-size: medium;
+    padding: 5%;
+}
+
+p {
+    line-height: 140%;
+    width: 80%;
 }
