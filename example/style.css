@@ -17,3 +17,39 @@ p {
     line-height: 140%;
     width: 80%;
 }
+
+.flextest {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rechteck {
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    border: 2px;
+    border-style: dashed;
+    padding: 20px;
+    margin: 10px;
+    transition-property: background-color, width, height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.rechteck:hover {
+    background-color: aqua;
+    width: 350px;
+    height: 350px;
+    animation: rotateAnimation 2s ease;
+}
+
+@keyframes rotateAnimation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
