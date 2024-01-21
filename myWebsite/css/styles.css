@@ -1,3 +1,7 @@
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
 .header {
     height: 620px;
     background-image: url("../img/header_back.jpg");
@@ -9,10 +13,55 @@
     color: white;
     float: right;  
     margin-top: 50px;
+    text-shadow: 0px 2px 2px black;
 }
 
 .header-navbar-links li {
     float: left;
     list-style-type: none;
     margin-left: 26px;
+}
+
+.header-brand-wrapper {
+    margin-top: 50px;
+    float: left;
+}
+
+.header-brand {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 150%;
+    display: block;
+    margin-top: -4%;
+    text-shadow: 0px 2px 2px black;
+}
+
+.slogan {
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+    text-shadow: 0px 2px 2px black;
+}
+
+.slogan-top {
+    font-size: 150%;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.slogan-bottom {
+    font-size: 280%;
+    font-weight: bold;
+}
+
+.slogan-button {
+    color: white;
+    text-shadow: 0px 2px 2px black;
+    margin-top: 30%;
+}
+
+.slogan-button:hover {
+    color: white;
+    text-shadow: 0px 2px 2px black;
 }
