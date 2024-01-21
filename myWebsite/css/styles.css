@@ -46,7 +46,6 @@ body {
 
 .slogan-top {
     font-size: 150%;
-    font-family: sans-serif;
     font-weight: lighter;
 }
 
@@ -64,4 +63,18 @@ body {
 .slogan-button:hover {
     color: white;
     text-shadow: 0px 2px 2px black;
+}
+
+.service {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: lightgray;
+}
+
+.service-titel {
+    font-weight: lighter;
+}
+
+.service p {
+    color: rgb(117,117,117);
 }
