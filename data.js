@@ -18,6 +18,18 @@ const projectsData = [
         link: "https://timguske.github.io/react/"
     },
     {
+        name: "Solution Coding",
+        type: "HTML und CSS",
+        date: "20.01.2024",
+        link: "https://timguske.github.io/solution-coding/"
+    },
+    {
+        name: "Work Countdown",
+        type: "react",
+        date: "20.01.2024",
+        link: "https://timguske.github.io/work-countdown/"
+    },
+    {
         name: "Zettel mit Paper Design",
         type: "React",
         date: "01.12.2023",
