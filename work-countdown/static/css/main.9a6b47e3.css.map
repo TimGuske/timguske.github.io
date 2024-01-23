@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.9a6b47e3.css","mappings":"AAAA,KAGE,wBAAyB,CADzB,aAAuB,CADvB,sBAGF","sources":["styles/index.css"],"sourcesContent":["body {\n  font-family:  sans-serif;\n  color: rgb(240,240,240);\n  background-color: #282c34;\n}\n"],"names":[],"sourceRoot":""}

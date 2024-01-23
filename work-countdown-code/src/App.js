@@ -14,16 +14,16 @@ function App() {
   const [sollArbeitszeit, setSollArbeitszeit] = useState('7.6');
   const [ueberstunden, setUeberstunden] = useState(null);
   const [arbeitszeit, setArbeitszeit] = useState(null);
+  const [useRealTime, setUseRealTime] = useState(true);
 
   const berechneDaten = () => {
-
+    console.log('Call: berechne Daten');
     function uhrzeitZuDezimal(uhrzeit) {
       const [stunden, minuten] = uhrzeit.split(':').map(Number);
       return stunden + minuten / 60;
     }
 
-    const currentTime = getCurrentTime();
-    setEndzeit(currentTime);
+   
 
     const startStunden = uhrzeitZuDezimal(startzeit);
     const endStunden = uhrzeitZuDezimal(endzeit);
@@ -34,7 +34,7 @@ function App() {
 
     setArbeitszeit(arbeitszeitT);
     setUeberstunden(ueberstundenT);
-    console.log(arbeitszeitT,ueberstundenT);
+    console.log(arbeitszeitT, ueberstundenT);
   }
 
   const handleSubmit = (e) => {
@@ -43,15 +43,26 @@ function App() {
   };
 
   useEffect(() => {
+    console.log('Call: UseEffect');
     berechneDaten();
-    const intervalId = setInterval(() => {
-      berechneDaten();
-    }, 10000);
 
-    return () => clearInterval(intervalId);
-  }, [startzeit, pause, endzeit]);
+    if (useRealTime) {
+      const intervalId = setInterval(() => {
+        console.log('Call: SetInterval');
+
+        const currentTime = getCurrentTime();
+        setEndzeit(currentTime);
+        
+        berechneDaten();
+      }, 10000);
+
+      return () => clearInterval(intervalId);
+    }
+    
+  }, [startzeit, pause, endzeit, useRealTime]);
 
   function getCurrentTime() {
+    console.log('Call: getCurrentTime');
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
@@ -118,15 +129,23 @@ function App() {
             <Button variant='secondary' type='submit'>Berechne Überstunden</Button>
           </Col>
           <Col sm="4">
-            <Form.Check className='mt-2' type="switch" id="custom-switch" label="RealTime" />
+            <Form.Check
+              className='mt-2'
+              type="switch"
+              id="custom-switch"
+              label="RealTime"
+              checked={useRealTime}
+              onChange={(e) => setUseRealTime(e.target.checked)}
+            />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="mb-3" >
           <Form.Label column sm="2"></Form.Label>
           <Col sm="8">
-            <h2 style={{ color: ueberstunden < 0 ? 'red' : 'green' }}>
+            <h3 style={{ color: ueberstunden < 0 ? 'red' : 'green' }}>
               {ueberstunden} Stunden (Arbeitszeit: {arbeitszeit}h)
-            </h2>
+            </h3>
+            {useRealTime ? (<p>RealTime aktiv</p>) : (<p>keine Berechnung aktiv </p>)}
           </Col>
         </Form.Group>
       </Form>
