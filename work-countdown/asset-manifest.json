@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/work-countdown/static/css/main.069505bd.css",
-    "main.js": "/work-countdown/static/js/main.e53fc9d7.js",
+    "main.js": "/work-countdown/static/js/main.46be693f.js",
     "index.html": "/work-countdown/index.html",
     "main.069505bd.css.map": "/work-countdown/static/css/main.069505bd.css.map",
-    "main.e53fc9d7.js.map": "/work-countdown/static/js/main.e53fc9d7.js.map"
+    "main.46be693f.js.map": "/work-countdown/static/js/main.46be693f.js.map"
   },
   "entrypoints": [
     "static/css/main.069505bd.css",
-    "static/js/main.e53fc9d7.js"
+    "static/js/main.46be693f.js"
   ]
 }
