@@ -23,8 +23,6 @@ function App() {
       return stunden + minuten / 60;
     }
 
-   
-
     const startStunden = uhrzeitZuDezimal(startzeit);
     const endStunden = uhrzeitZuDezimal(endzeit);
     const pauseStunden = uhrzeitZuDezimal(pause);
@@ -44,15 +42,14 @@ function App() {
 
   useEffect(() => {
     console.log('Call: UseEffect');
+    setWorkTime();
     berechneDaten();
 
     if (useRealTime) {
       const intervalId = setInterval(() => {
         console.log('Call: SetInterval');
 
-        const currentTime = getCurrentTime();
-        setEndzeit(currentTime);
-        
+        setWorkTime();
         berechneDaten();
       }, 10000);
 
@@ -60,6 +57,11 @@ function App() {
     }
     
   }, [startzeit, pause, endzeit, useRealTime]);
+
+  const setWorkTime = () => {
+    const currentTime = getCurrentTime();
+    setEndzeit(currentTime);
+  }
 
   function getCurrentTime() {
     console.log('Call: getCurrentTime');
