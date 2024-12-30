@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffcc;
+}
+
+input, button {
+    font-size: 1.2em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+input {
+    background: #203a43;
+    color: #00ffff;
+    border: 2px solid #00ffcc;
+}
+
+button {
+    background: #00ffcc;
+    color: #203a43;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #00ffff;
+    transform: scale(1.05);
+}
+
+/* Circuit Styles */
+#circuit {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    background: #1e2832;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffff;
+    position: relative;
+}
+
+/* Gatter */
+.gate {
+    fill: #2c5364;
+    stroke: #00ffcc;
+    stroke-width: 2px;
+}
+
+.gate.active {
+    stroke: #ff9900; /* Aktiver Rahmen für XOR- und AND-Gatter */
+}
+
+/* Lampen */
+.lamp {
+    fill: #203a43; /* Standard-Hintergrund */
+    stroke: #00ffff;
+    stroke-width: 2px;
+}
+
+.lamp.on {
+    fill: #00ffcc; /* Aktiviertes Licht */
+    stroke: #ffffff;
+}
+
+/* Beschriftungen */
+.label {
+    fill: #00ffff;
+    font-size: 14px;
+    text-anchor: middle;
+}
+
+/* Schriftfarbe bei aktiven Gattern oder Lampen */
+.gate.active .label,
+.lamp.on .label {
+    fill: #000000; /* Dynamisch angepasste Schriftfarbe für bessere Lesbarkeit */
+}

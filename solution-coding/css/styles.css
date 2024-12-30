@@ -70,6 +70,7 @@ body {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: rgb(240,240,240);
+    margin-bottom: 5%;
 }
 
 .service-titel {
@@ -86,4 +87,11 @@ body {
     font-size: 2000%;
     text-align: center;
     margin-top: -10%;
+}
+
+.identity-icon {
+    color: rgb(224,224,224);
+    font-size: 1500%;
+    text-align: center;
+    margin-top: 0%;
 }

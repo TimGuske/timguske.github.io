@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binär-Addition mit Schaltplan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Logik Gatter für Binär-Addition</h1>
+
+    <label for="num1">Zahl 1 (dezimal):</label>
+    <input type="number" id="num1" min="0" max="99" oninput="updateBinary('num1', 'bin1')">
+    <span id="bin1">Binär: </span>
+    <br>
+
+    <label for="num2">Zahl 2 (dezimal):</label>
+    <input type="number" id="num2" min="0" max="99" oninput="updateBinary('num2', 'bin2')">
+    <span id="bin2">Binär: </span>
+    <br>
+
+    <button onclick="performAddition()">Addieren</button>
+
+    <h2>Logik Gatter</h2>
+    <div id="circuit"></div>
+
+    <h2>Ergebnis</h2>
+    <div id="result-binary">Binär: </div>
+    <div id="result-decimal">Dezimal: </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

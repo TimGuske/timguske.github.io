@@ -30,6 +30,12 @@ const projectsData = [
         link: "https://timguske.github.io/work-countdown/"
     },
     {
+        name: "Binär Rechner",
+        type: "HTML und JavaScript",
+        date: "20.12.2024",
+        link: "https://timguske.github.io/addierer/"
+    },
+    {
         name: "Zettel mit Paper Design",
         type: "React",
         date: "01.12.2023",

@@ -9,7 +9,7 @@ function App() {
   const [startzeit, setStartzeit] = useState('7:55');
   const [pause, setPause] = useState('0:45');
   const [endzeit, setEndzeit] = useState(getCurrentTime());
-  const [sollArbeitszeit, setSollArbeitszeit] = useState('7.60');
+  const [sollArbeitszeit, setSollArbeitszeit] = useState('3.80');
   const [ueberstunden, setUeberstunden] = useState(null);
   const [arbeitszeit, setArbeitszeit] = useState(null);
 
