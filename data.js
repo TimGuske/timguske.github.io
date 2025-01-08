@@ -52,7 +52,13 @@ const projectsData = [
         type: "Next.js und React mit MongoDB",
         date: "noch offen",
         link: "/"
-    }
+    },
+    {
+        name: "Choreo Maker (simpel) V1",
+        type: "React",
+        date: "06.01.2025",
+        link: "https://timguske.github.io/cm-v1/"
+    },
 ];
 
 function generateProjectsTable() {
