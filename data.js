@@ -62,7 +62,7 @@ const projectsData = [
     {
         name: "Choreo Maker Free",
         type: "React",
-        date: "1.01.2025",
+        date: "11.01.2025",
         link: "https://timguske.github.io/cm-free/"
     },
 ];
